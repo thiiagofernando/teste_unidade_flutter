@@ -8,12 +8,14 @@ void main() {
     expect(person.imc, 20.56);
   });
 
-  test("Se a Idade for maior de 18 deve retornar true", () {
-    expect(person.maiorDeIdade, true);
-  });
+  group("Maior De Idade | ", () {
+    test("Se a Idade for maior de 18 deve retornar true na consulta", () {
+      expect(person.maiorDeIdade, true);
+    });
 
-  test("Se a Idade for menor de 18 deve retornar false", () {
-    final person = Person(name: "Zé", age: 12, height: 1.77, weight: 64.4);
-    expect(person.maiorDeIdade, false);
+    test("Se a Idade for menor de 18 deve retornar false na consulta", () {
+      final person = Person(name: "Zé", age: 12, height: 1.77, weight: 64.4);
+      expect(person.maiorDeIdade, false);
+    });
   });
 }
