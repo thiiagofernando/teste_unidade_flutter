@@ -7,7 +7,6 @@ void main() {
   test("IMC deve ser 20.56", () {
     expect(person.imc, 20.56);
   });
-
   group("Maior De Idade | ", () {
     test("Se a Idade for maior de 18 deve retornar true na consulta", () {
       expect(person.maiorDeIdade, true);
