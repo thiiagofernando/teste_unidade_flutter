@@ -1,6 +1,5 @@
 import 'package:http/http.dart' as http;
-import 'package:test/expect.dart';
-import 'package:test/scaffolding.dart';
+import 'package:test/test.dart';
 import 'package:teste_unidade/models/person.dart';
 import 'package:teste_unidade/repository/person_repository.dart';
 import 'package:mocktail/mocktail.dart';
@@ -10,7 +9,7 @@ class ClientMok extends Mock implements http.Client {}
 void main() {
   final client = ClientMok();
   final repositorio = PersonRepository(client);
-  late List<Person> list;
+  List<Person> list;
 
   setUpAll(() {
     registerFallbackValue(Uri.parse('www.localhost.com.br'));

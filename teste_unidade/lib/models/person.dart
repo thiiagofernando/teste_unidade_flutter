@@ -9,11 +9,11 @@ class Person {
   final double weight;
 
   Person({
-    required this.id,
-    required this.name,
-    required this.age,
-    required this.height,
-    required this.weight,
+    this.id,
+    this.name,
+    this.age,
+    this.height,
+    this.weight,
   });
 
   double get imc {
